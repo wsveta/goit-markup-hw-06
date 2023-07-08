@@ -46,7 +46,8 @@ img {
 }
 
 .container {
-  width: 1158px;
+  min-width: 428px;
+  max-width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -54,6 +55,7 @@ img {
 .menu {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .navigation {
@@ -82,7 +84,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   display: inline-block;
-  margin-right: 76px;
+  margin-right: 120px;
 }
 
 .logo-second-part {
@@ -125,10 +127,16 @@ img {
 
 .normalize {
   font-style: normal;
-  margin-left: auto;
 }
 
 .contacts-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 120px;
+}
+
+.contact-header {
   font-size: 16px;
   line-height: 1.5;
   color: var(--text);
@@ -692,10 +700,11 @@ img {
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  fill: transparent; 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 input[type="checkbox"]:checked + .modal-subtitle .privacy {
   background-color: var(--pressed-state);
@@ -828,4 +837,65 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+/* Мобільне вікно */
+
+@media (max-width: 767px) {
+  .menu-navs,
+  .normalize {
+    display: none;
+  }
+
+  .navigation {
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1158px) {
+  .logo-first-part {
+    margin-right: 76px;
+  }
+
+  .contacts-header {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .menu {
+    justify-content: space-between;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #ffffff;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
 }
