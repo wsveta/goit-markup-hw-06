@@ -295,16 +295,18 @@ img {
 
 .team-block {
   background-color: var(--light);
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .members {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px 24px;
+  align-items: center;
 }
 
 .member-card {
-  width: calc((100% - 48px) / 3);
+  width: 264px;
   background: #ffffff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -392,12 +394,14 @@ img {
 }
 
 .customers-block {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .customers {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px 16px;
 }
 
 .customers .link {
@@ -432,15 +436,16 @@ img {
 
 .footer-block .container {
   display: flex;
-  align-items: baseline;
+  gap: 72px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .first-footer-column {
-  margin-right: 120px;
 }
 
 .last-footer-column {
-  margin-left: 80px;
 }
 
 .footer-input {
@@ -448,11 +453,12 @@ img {
   border: 1px solid var(--text-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   padding-left: 16px;
-  width: 264px;
+  width: 398px;
   height: 40px;
   background-color: transparent;
 
   color: var(--text-color);
+  opacity: 0.3;
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -464,7 +470,8 @@ img {
 
 .form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .lable {
@@ -473,8 +480,9 @@ img {
 
 .footer-button {
   display: flex;
+  margin: 0 auto;
   align-items: center;
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   border: none;
   justify-content: center;
@@ -512,7 +520,6 @@ img {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 16px;
-  margin-right: 76px;
 }
 
 .logo-first-part-footer:hover {
@@ -532,6 +539,7 @@ img {
 }
 
 .media-footer {
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -848,6 +856,13 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
 
 /* Мобільне вікно */
 @media (max-width: 767px) {
+  
+  .first-footer-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .menu-navs,
   .normalize {
     display: none;
@@ -861,14 +876,44 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
 }
 
 @media (min-width: 768px) {
+  .footer-block .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 72px 24px;
+    justify-content: flex-start;
+    margin-left: 108px;
+  }
+
+  .media-footer {
+    text-align: left;
+  }
+
+  .form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-input {
+    width: 264px;
+  }
+
+  .members {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .menu-toggle {
     display: none;
   }
+
   .principles {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 72px 24px;
   }
+
   .principle {
     width: calc((100% - 24px) / 2);
   }
@@ -878,13 +923,37 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1157px) {
+  .customers-block .container,
+  .team-block .container {
+    width: 582px;
+  }
+}
 @media (min-width: 1158px) {
+  .team-block,
+  .customers-block,
+  .principles-block {
+    padding: 120px 0;
+  }
+
+  .footer-block .container {
+    gap: 0;
+  }
+
+  .first-footer-column {
+    margin-right: 120px;
+  }
+
+  .last-footer-column {
+    margin-left: 80px;
+  }
+
+  .footer-input {
+    opacity: 1;
+  }
   .actings-block {
     display: block;
   }
-.principles-block {
-  padding: 120px 0;
-}
   .principle {
     width: calc((100% - 72px) / 4);
   }
