@@ -627,7 +627,7 @@ img {
 
 .modal {
   position: absolute;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -851,6 +851,34 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+/* Мобільне меню */
+.mobile-menu {
+  flex-grow: 1;
+}
+.mobile-menu-nav,
+.mobile-number {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.72px;
+  margin-bottom: 40px;
+}
+
+.mobile-number {
+  color: var(--primary-brand);
+}
+
+.mobile-email {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  margin-bottom: 48px;
+}
+
+.mobile-social-links {
+  gap: 65px;
+}
 
 /* Мобільне вікно */
 @media (max-width: 767px) {
@@ -871,11 +899,21 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
     height: 70px;
   }
 }
-@media (max-width: 428px) {
+@media (max-width: 427px) {
   .hero-title,
   .last-footer-column,
-  .footer-input {
+  .footer-input
+   {
     width: 100%;
+  }
+  .mobile-social-links {
+    gap: calc((100% - 160px) / 3);
+  }
+.mobile-number {
+  font-size: 20px;
+}
+  .modal {
+    width: 90%;
   }
 
   .product {
@@ -884,6 +922,10 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   }
 }
 @media (min-width: 768px) {
+  .modal {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   .products {
     flex-direction: row;
     flex-wrap: wrap;
@@ -968,7 +1010,7 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   .filters-block .container {
     width: 774px;
   }
-  
+
   .customers-block .container,
   .team-block .container {
     width: 582px;
@@ -1066,12 +1108,14 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
 }
 
 .menu-container {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding: 80px 35px 40px 40px;
   background-color: #ffffff;
   z-index: 999;
 
