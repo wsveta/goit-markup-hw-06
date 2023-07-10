@@ -22,25 +22,36 @@
           <a class="logo-first-part link" href="./index.html"
             >Web<span class="logo-second-part">Studio</span></a
           >
-          <ul class="list">
-            <li><a class="link menu-nav" href="./index.html">Studio</a></li>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="32px" height="22px">
+              <use href="./images/icons.svg#hamburger"></use>
+            </svg>
+          </button>
+          <ul class="list menu-navs">
             <li>
-              <a class="link menu-nav underline" href="./portfolio.html"
-                >Portfolio</a
-              >
+              <a class="link menu-nav underline" href="./index.html">Studio</a>
             </li>
-            <li><a class="link menu-nav" href="">Contacts</a></li>
+            <li>
+              <a class="link menu-nav" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a class="link menu-nav" href="./contacts.html">Contacts</a>
+            </li>
           </ul>
         </nav>
         <address class="normalize">
-          <ul class="list">
+          <ul class="list contacts-header">
             <li>
-              <a class="link contacts-header" href="mailto:info@devstudio.com"
+              <a class="link contact-header" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="link contacts-header" href="tel:+110001111111"
+              <a class="link contact-header" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -64,7 +75,7 @@
           <ul class="list products">
             <li class="product">
               <a class="link" href="">
-                <div class="box">
+                <div class="product-card">
                   <img
                     src="./images/banking-app.jpg"
                     alt="Banking App Interface Concept"
@@ -85,7 +96,7 @@
             </li>
             <li class="product">
               <a class="link" href="">
-                <div class="box">
+                <div class="product-card">
                   <img
                     src="./images/cashless-payment.jpg"
                     alt="Cashless Payment"
@@ -106,7 +117,7 @@
             </li>
             <li class="product">
               <a class="link" href="">
-                <div class="box">
+                <div class="product-card">
                   <img
                     src="./images/meditation-app.jpg"
                     alt="Meditation App"
@@ -127,7 +138,7 @@
             </li>
             <li class="product">
               <a class="link" href="">
-                <div class="box">
+                <div class="product-card">
                   <img
                     src="./images/taxi-service.jpg"
                     alt="Taxi Service"
@@ -148,7 +159,7 @@
             </li>
             <li class="product">
               <a class="link" href="">
-                <div class="box">
+                <div class="product-card">
                   <img
                     src="./images/screen-illustrations.jpg"
                     alt="Screen Illustrations"
@@ -169,7 +180,7 @@
             </li>
             <li class="product">
               <a class="link" href="">
-                <div class="box">
+                <div class="product-card">
                   <img
                     src="./images/online-courses.jpg"
                     alt="Online Courses"
@@ -190,7 +201,7 @@
             </li>
             <li class="product">
               <a class="link" href="">
-                <div class="box">
+                <div class="product-card">
                   <img
                     src="./images/instagram-stories-concept.jpg"
                     alt="Instagram Stories Concept"
@@ -211,7 +222,7 @@
             </li>
             <li class="product">
               <a class="link" href="">
-                <div class="box">
+                <div class="product-card">
                   <img
                     src="./images/organic-food.jpg"
                     alt="Organic Food"
@@ -232,7 +243,7 @@
             </li>
             <li class="product">
               <a class="link" href="">
-                <div class="box">
+                <div class="product-card">
                   <img
                     src="./images/fresh-coffee.jpg"
                     alt="Fresh Coffee"
@@ -256,6 +267,7 @@
       </section>
     </main>
     <!--Підвал-->
+     <!--Підвал-->
     <footer class="footer-block">
       <div class="container">
         <div class="first-footer-column">
@@ -321,6 +333,67 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <!--Мобільне меню-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="js-close-menu close-button">
+        <svg width="8" height="8">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li><a href="./index.html" class="link">Studio</a></li>
+        <li><a href="./portfolio.html" class="link">Portfolio</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+      </ul>
+
+        <ul class="list">
+          <li>
+            <a class="link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a>
+          </li>
+          <li>
+            <a class="link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          </li>
+        </ul>
+
+        <ul class="social-links list">
+            <li class="social-link">
+              <a href="https://www.instagram.com/" target="_blank" class="link">
+                <svg class="footer-icon" width="24" height="24">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="https://www.twitter.com/" target="_blank" class="link">
+                <svg class="footer-icon" width="24" height="24">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="https://www.facebook.com/" target="_blank" class="link">
+                <svg class="footer-icon" width="24" height="24">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="https://www.linkedin.com/" target="_blank" class="link">
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

@@ -549,15 +549,15 @@ img {
 }
 
 .filters-block {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  margin: 48px 0;
 }
 
 .filters {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 72px;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-bottom: 48px;
+  gap: 16px 24px;
 }
 
 .filter {
@@ -569,10 +569,10 @@ img {
   line-height: 1.5;
   border: 1px solid var(--accent);
   border-radius: 4px;
-  padding: 12px 24px;
+  padding: 8px 16px;
+  letter-spacing: 0.64px;
   cursor: pointer;
   text-align: center;
-  letter-spacing: 0.04em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -591,14 +591,17 @@ img {
 
 .products {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 48px 24px;
+  align-items: center;
 }
 
 .product {
-  width: calc((100% - 48px) / 3);
+  width: 360px;
+}
+.product-card {
+  position: relative;
+  overflow: hidden;
 }
 
 .product .link {
@@ -806,11 +809,6 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   background-color: var(--pressed-state);
 }
 
-.box {
-  position: relative;
-  overflow: hidden;
-}
-
 .overlay {
   position: absolute;
   top: 0;
@@ -880,9 +878,33 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
     width: 100%;
   }
 
-  
+  .product {
+    width: 100%;
+    max-width: 360px;
+  }
 }
 @media (min-width: 768px) {
+  .products {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+  }
+
+  .filters-block {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .filters {
+    margin-bottom: 64px;
+    justify-content: center;
+  }
+
+  .filter {
+    padding: 12px 24px;
+    letter-spacing: 0.04em;
+  }
+
   .footer-block .container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -943,16 +965,32 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
+  .filters-block .container {
+    width: 774px;
+  }
+  
   .customers-block .container,
   .team-block .container {
     width: 582px;
   }
 }
 @media (min-width: 1158px) {
+  .products {
+    row-gap: 48px;
+  }
   .team-block,
   .customers-block,
   .principles-block {
     padding: 120px 0;
+  }
+
+  .filters-block {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  .filters {
+    margin-bottom: 72px;
   }
 
   .customers {
