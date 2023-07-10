@@ -46,7 +46,7 @@ img {
 }
 
 .container {
-  min-width: 428px;
+  min-width: 320px;
   max-width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
@@ -140,8 +140,8 @@ img {
 }
 
 .contact-header {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 0.8;
   color: var(--text);
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -856,7 +856,6 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
 
 /* Мобільне вікно */
 @media (max-width: 767px) {
-  
   .first-footer-column {
     display: flex;
     align-items: center;
@@ -874,7 +873,15 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
     height: 70px;
   }
 }
+@media (max-width: 428px) {
+  .hero-title,
+  .last-footer-column,
+  .footer-input {
+    width: 100%;
+  }
 
+  
+}
 @media (min-width: 768px) {
   .footer-block .container {
     flex-direction: row;
@@ -883,6 +890,14 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
     gap: 72px 24px;
     justify-content: flex-start;
     margin-left: 108px;
+  }
+
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    margin-bottom: 36px;
+    width: 496px;
   }
 
   .media-footer {
@@ -921,6 +936,10 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   .feature-header {
     text-align: left;
   }
+
+  .customers {
+    column-gap: 24px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
@@ -934,6 +953,18 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   .customers-block,
   .principles-block {
     padding: 120px 0;
+  }
+
+  .customers {
+    justify-content: normal;
+  }
+
+  .hero-block {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  .hero-title {
+    margin-bottom: 48px;
   }
 
   .footer-block .container {
@@ -983,6 +1014,12 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   .contacts-header {
     flex-direction: row;
     gap: 40px;
+  }
+
+  .contact-header {
+    font-size: 16px;
+    line-height: 0.6;
+    letter-spacing: 0.32px;
   }
 
   .menu {
