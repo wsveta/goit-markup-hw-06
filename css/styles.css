@@ -863,7 +863,7 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
 }
 /* Мобільне меню */
 .mobile-menu {
-  margin-bottom: auto;
+  flex-grow: 1;
 }
 .mobile-menu-nav,
 .mobile-number {
