@@ -165,9 +165,19 @@ img {
   padding-top: 112px;
   padding-bottom: 112px;
   background-position: 50% 50%;
-  margin: auto;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+
+@media (min-resolution: 192dpi) {
+  .hero-block {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ), url(../images/people-office@2.jpg);
+  }    
 }
 
 .hero-title {
@@ -888,6 +898,10 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
     flex-direction: column;
   }
 
+  .customers-block .container {
+    max-width: 582px;
+  }
+
   .menu-navs,
   .normalize {
     display: none;
@@ -899,6 +913,7 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
     height: 70px;
   }
 }
+
 @media (max-width: 427px) {
   .hero-title,
   .last-footer-column,
@@ -1015,7 +1030,12 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   .team-block .container {
     width: 582px;
   }
+
+  .footer-block .container {
+    width: 526px;
+  }
 }
+
 @media (min-width: 1158px) {
   .products {
     row-gap: 48px;
@@ -1048,15 +1068,12 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   }
 
   .footer-block .container {
-    gap: 0;
+    column-gap: 0;
   }
 
-  .first-footer-column {
-    margin-right: 120px;
-  }
-
-  .last-footer-column {
-    margin-left: 80px;
+  .second-footer-column {
+    margin-right: 80px;
+    margin-left: 120px;
   }
 
   .footer-input {
@@ -1139,3 +1156,4 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   right: 16px;
   color: #fff;
 }
+
