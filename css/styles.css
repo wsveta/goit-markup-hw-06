@@ -461,6 +461,7 @@ img {
 .footer-input {
   border-radius: 4px;
   border: 1px solid var(--text-color);
+  outline: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   padding-left: 16px;
   width: 398px;
@@ -861,6 +862,7 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
 /* Мобільне меню */
 .mobile-menu {
   flex-grow: 1;
@@ -890,7 +892,10 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   gap: 65px;
 }
 
-/* Мобільне вікно */
+.mobile-close-button {
+  background-color: transparent;
+}
+
 @media (max-width: 767px) {
   .first-footer-column {
     display: flex;
