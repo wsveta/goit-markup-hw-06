@@ -1136,7 +1136,7 @@ input[type="checkbox"]:checked + .modal-subtitle .privacy {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 80px 35px 40px 40px;
   background-color: #ffffff;
   z-index: 999;
